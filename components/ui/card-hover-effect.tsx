@@ -76,6 +76,7 @@ export const HoverEffect = ({
               <div className="flex gap-3 ">
                 <a
                   href={item.link}
+                  target="_blank"
                   className="flex items-center justify-center gap-2 text-purple"
                 >
                   <span className="text-xs md:text-sm">Demo</span>
@@ -118,7 +119,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-black p-4 group-hover:border-slate-700 dark:border-white/[0.2]",
+        "_bg-black relative z-20 h-full w-full overflow-hidden rounded-2xl border border-transparent bg-background/10 p-4 hover:bg-black-100 group-hover:border-slate-700 dark:border-white/[0.2]",
         className
       )}
     >
@@ -137,7 +138,7 @@ export const CardImage = ({
   src: string;
 }) => {
   return (
-    <div className="w-fit">
+    <div className="w-full">
       <Image
         src={src}
         height="1000"
