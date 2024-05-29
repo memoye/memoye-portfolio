@@ -39,7 +39,7 @@ export default function Hero() {
           </p>
 
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
+            words="I Craft Experiences that Captivate."
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 

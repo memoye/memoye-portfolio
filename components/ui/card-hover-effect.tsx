@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 export const HoverEffect = ({
   items,
@@ -13,8 +14,11 @@ export const HoverEffect = ({
   items: {
     title: string;
     img: string;
-    description: string;
+    des: string;
+    iconLists: string[];
     link: string;
+    github_repo?: string;
+    id: number;
   }[];
   className?: string;
 }) => {
@@ -28,9 +32,9 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
+        <div
+          // href={item?.link}
+          key={item?.id}
           className="group relative  block h-full w-full p-2"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -55,10 +59,51 @@ export const HoverEffect = ({
           <Card>
             <CardImage src={item.img} />
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardDescription>{item.des}</CardDescription>
+            <CardFooter>
+              <div className="flex w-fit items-center">
+                {item.iconLists.map((icon, idx) => (
+                  <div
+                    key={icon}
+                    className="flex size-8 items-center justify-center rounded-full border border-white/[0.2] bg-black  lg:size-10"
+                    style={{ transform: `translateX(${5 * idx * 2 * -1}px)` }}
+                  >
+                    <Image src={icon} width={20} height={20} alt="icon" />
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex gap-3 ">
+                <a
+                  href={item.link}
+                  className="flex items-center justify-center gap-2 text-purple"
+                >
+                  <span className="text-xs md:text-sm">Demo</span>
+                  <FaExternalLinkAlt />
+                </a>
+
+                {item.github_repo && (
+                  <a
+                    href={item.github_repo}
+                    className="rounded-full p-2 hover:bg-neutral-200 dark:hover:bg-slate-800/[0.8]"
+                    title="Github repo"
+                  >
+                    <FaGithub />
+                  </a>
+                )}
+              </div>
+            </CardFooter>
           </Card>
-        </Link>
+        </div>
       ))}
+    </div>
+  );
+};
+
+export const CardFooter = ({ children }: { children?: React.ReactNode }) => {
+  return (
+    <div className="mb-2 mt-8 flex w-full items-center justify-between gap-4 max-sm:flex-wrap">
+      {children}
     </div>
   );
 };
@@ -131,7 +176,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-sm leading-relaxed tracking-wide text-zinc-400",
+        "mt-4 text-sm leading-relaxed tracking-wide text-zinc-400",
         className
       )}
     >
