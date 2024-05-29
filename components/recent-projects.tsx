@@ -3,7 +3,7 @@ import { HoverEffect } from "./ui/card-hover-effect";
 
 export default function RecentProjects() {
   return (
-    <div id="projects">
+    <div className="py-20" id="projects">
       <h2 className="heading">
         A selection of <span className="text-purple">my recent projects</span>
       </h2>
