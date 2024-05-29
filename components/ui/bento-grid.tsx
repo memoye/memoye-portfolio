@@ -53,8 +53,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["ReactJS", "NextJS", "Typescript"];
+  const rightLists = ["Redux", "ExpressJS", "TailwindCSS"];
 
   const [copied, setCopied] = useState(false);
 
@@ -126,12 +126,10 @@ export const BentoGridItem = ({
             "relative flex min-h-40 flex-col p-5 px-5 transition duration-200 group-hover/bento:translate-x-2 md:h-full lg:p-10"
           )}
         >
-          {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
           <div className="z-10 font-sans text-sm font-extralight text-[#C1C2D3] md:max-w-32 md:text-xs lg:text-base">
             {description}
           </div>
-          {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
-          {/* remove mb-2 mt-2 */}
+
           <div
             className={`z-10 max-w-96 font-sans text-lg font-bold lg:text-3xl`}
           >
@@ -145,13 +143,14 @@ export const BentoGridItem = ({
           {id === 3 && (
             <div className="absolute -right-3 flex w-fit gap-1 lg:-right-2 lg:gap-5">
               {/* tech stack lists */}
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+              <div className="flex flex-col gap-3 lg:gap-8">
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
                     className="rounded-lg bg-[#10132E] px-3 py-2 text-center text-xs opacity-50 
                     lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
                   >
+                    {/* TODO:add icons */}
                     {item}
                   </span>
                 ))}
@@ -165,6 +164,7 @@ export const BentoGridItem = ({
                     className="rounded-lg bg-[#10132E] px-3 py-2 text-center text-xs opacity-50 
                     lg:px-3 lg:py-4 lg:text-base lg:opacity-100"
                   >
+                    {/* TODO:add icons */}
                     {item}
                   </span>
                 ))}
@@ -173,10 +173,6 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="relative mt-5">
-              {/* button border magic from tailwind css buttons  */}
-              {/* add rounded-md h-8 md:h-8, remove rounded-full */}
-              {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
-              {/* add handleCopy() for the copy the text */}
               <div
                 className={`absolute -bottom-5 right-0 ${
                   copied ? "block" : "block"
@@ -188,7 +184,7 @@ export const BentoGridItem = ({
 
               <button onClick={handleCopy}>
                 <MagicButton
-                  title={copied ? "Email is Copied!" : "Copy my email address"}
+                  title={copied ? "Email is copied!" : "Copy my email address"}
                   icon={<IoCopyOutline />}
                   iconPosition="left"
                   className="!bg-[#161A31]"

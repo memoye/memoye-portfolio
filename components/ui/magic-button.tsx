@@ -2,7 +2,6 @@ type MagicButtonProps = {
   title: string;
   icon: React.ReactNode;
   iconPosition: "left" | "right";
-  onClick?: () => void;
   className?: string;
 };
 
@@ -11,7 +10,6 @@ export default function MagicButton({
   icon,
   iconPosition,
   className,
-  onClick,
 }: MagicButtonProps) {
   return (
     <span className="relative inline-flex h-12 w-full overflow-hidden  rounded-lg p-[1px] focus:outline-none md:mt-10 md:w-60">
