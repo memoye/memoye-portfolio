@@ -17,20 +17,20 @@ export default function Testimonials() {
 
         <div className="flex flex-wrap items-center justify-center gap-4 max-lg:mt-10 md:gap-16">
           {companies.map(({ id, img, name, nameImg }) => (
-            <div key={id} className="flex max-w-32  gap-2 md:max-w-60">
+            <div key={id} className="flex h-auto max-w-32 gap-2 md:max-w-60">
               <Image
                 src={img}
                 width={40}
                 height={40}
                 alt={name}
-                className="w-5 md:w-10"
+                className="h-auto w-5 md:w-10"
               />
               <Image
                 src={nameImg}
                 width={96}
                 height={96}
                 alt={name}
-                className="w-20 md:w-24"
+                className="h-auto w-20 md:w-24"
               />
             </div>
           ))}

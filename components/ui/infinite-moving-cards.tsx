@@ -109,9 +109,10 @@ export const InfiniteMovingCards = ({
                   <span className="me-3">
                     <Image
                       src="/profile.svg"
-                      width={20}
-                      height={20}
+                      width={40}
+                      height={40}
                       alt="profile"
+                      className="aspect-square w-8 md:w-16"
                     />
                   </span>
 

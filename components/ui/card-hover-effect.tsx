@@ -68,7 +68,13 @@ export const HoverEffect = ({
                     className="flex size-8 items-center justify-center rounded-full border border-white/[0.2] bg-black  lg:size-10"
                     style={{ transform: `translateX(${5 * idx * 2 * -1}px)` }}
                   >
-                    <Image src={icon} width={20} height={20} alt="icon" />
+                    <Image
+                      src={icon}
+                      width={20}
+                      className="h-auto w-auto"
+                      height={20}
+                      alt="icon"
+                    />
                   </div>
                 ))}
               </div>

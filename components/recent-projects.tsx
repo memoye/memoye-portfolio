@@ -8,7 +8,7 @@ export default function RecentProjects() {
         A selection of <span className="text-purple">my recent projects</span>
       </h2>
 
-      <div className="mt-6 flex flex-wrap items-center justify-center gap-16 p-4">
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-16">
         <HoverEffect
           items={projects.map(({ ...item }) => ({
             ...item,

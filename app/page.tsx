@@ -1,7 +1,10 @@
+import Footer from "@/components/footer";
 import Grid from "@/components/grid";
 import Hero from "@/components/hero";
+import MyProcess from "@/components/my-process";
 import RecentProjects from "@/components/recent-projects";
 import Testimonials from "@/components/testimonials";
+import XP from "@/components/xp";
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
         <Grid />
         <RecentProjects />
         <Testimonials />
+        <XP />
+        <MyProcess />
+        <Footer />
       </div>
     </main>
   );

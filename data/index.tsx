@@ -1,3 +1,11 @@
+// import Image from "next/image";
+import {
+  RiGithubFill,
+  RiLinkedinBoxFill,
+  RiTwitterXFill,
+} from "react-icons/ri";
+import { SiFrontendmentor } from "react-icons/si";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -202,17 +210,70 @@ export const workExperience = [
   },
 ];
 
+export const myProcess = [
+  {
+    title: "Planning & Strategy",
+    description:
+      "We'll collaborate to map out your website's goal, target audience, and key functionalities. We'll discuss things like the structure, navigation, and content requirements.",
+    content: "PHASE ONE",
+    //  <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
+    //   Collaborative Editing
+    // </div>
+    // <PhaseNum text="PHASE ONE" />
+  },
+  {
+    title: "Development and Progress Update",
+    description:
+      "Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you you updated every step of the way",
+    content: "PHASE TWO",
+    // <PhaseNum text="PHASE TWO" />
+
+    // <div className="flex h-full  w-full items-center justify-center text-white">
+    //   <Image
+    //     src="/linear.webp"
+    //     width={300}
+    //     height={300}
+    //     className="h-full w-full object-cover"
+    //     alt="linear board demo"
+    //   />
+    // </div>
+  },
+  {
+    title: "Development & Launch",
+    description:
+      "This is where the magic happens! Based on the approved design, I'll translate everything into functional code, building your whole website from the ground up.",
+    content: "PHASE THREE",
+    // <PhaseNum text="PHASE THREE" />
+
+    // <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
+    //   Version control
+    // </div>
+  },
+];
+
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    handle: "@memoye on GitHub",
+    url: "https://github.com/memoye",
+    icon: RiGithubFill,
   },
   {
     id: 2,
-    img: "/twit.svg",
+    handle: "Brown Memoye on LinkedIn",
+    url: "https://linkedin.com/in/b-me",
+    icon: RiLinkedinBoxFill,
   },
   {
     id: 3,
-    img: "/link.svg",
+    handle: "@memoye_io on Twitter",
+    icon: RiTwitterXFill,
+    url: "https://x.com/memoye_io",
+  },
+  {
+    id: 4,
+    handle: "@memoye on Frontend Mentor",
+    icon: SiFrontendmentor,
+    url: "https://frontendmentor.io/profile/memoye",
   },
 ];
