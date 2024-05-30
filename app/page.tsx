@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Grid from "@/components/grid";
 import Hero from "@/components/hero";
 import MyProcess from "@/components/my-process";
@@ -7,7 +8,7 @@ import XP from "@/components/xp";
 
 export default function Home() {
   return (
-    <main className="relative mx-auto flex flex-col items-center justify-center overflow-hidden bg-black-100 px-5 sm:px-10 ">
+    <main className="_bg-black-100 relative mx-auto flex flex-col items-center justify-center overflow-hidden px-5 sm:px-10 ">
       <div className="w-full max-w-7xl">
         <Hero />
         <Grid />
