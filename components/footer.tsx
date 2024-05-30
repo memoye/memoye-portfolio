@@ -40,7 +40,12 @@ export default function Footer() {
 
         <div className="z-[100000] flex items-center gap-6 md:gap-3">
           {socialMedia.map(({ id, icon: Icon, url, handle }) => (
-            <a href={url} key={id} title={handle}>
+            <a
+              className="rounded-md border-white-100/95 bg-white/30 p-2 backdrop-blur"
+              href={url}
+              key={id}
+              title={handle}
+            >
               <Icon className="size-6" />
             </a>
           ))}
