@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import Grid from "@/components/grid";
 import Hero from "@/components/hero";
 import MyProcess from "@/components/my-process";
@@ -16,7 +15,6 @@ export default function Home() {
         <Testimonials />
         <XP />
         <MyProcess />
-        <Footer />
       </div>
     </main>
   );
